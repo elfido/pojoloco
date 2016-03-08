@@ -1,0 +1,31 @@
+{
+  "name": "pojoutils",
+  "version": "0.1.0",
+  "description": "Utils to convert code to Java Pojos",
+  "main": "pojoloco.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elfido/pojoloco.git"
+  },
+  "keywords": [
+    "pojoloco",
+    "fido"
+  ],
+  "author": "Fido <fidencio.garrido@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elfido/pojoloco/issues"
+  },
+  "homepage": "https://github.com/elfido/pojoloco",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-watch": "~0.6.1",
+    "mocha": "~2.4.5",
+    "grunt-mocha-test": "~0.12.7",
+    "grunt-contrib-jshint": "~1.0.0",
+    "chai": "~3.5.0"
+  }
+}

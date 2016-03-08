@@ -1,0 +1,65 @@
+{
+  "qualifiedStrings": [
+    {
+      "source": "a",
+      "expected": "a"
+    },
+    {
+      "source": "a_a",
+      "expected": "aA"
+    },
+    {
+      "source": "a_a_a",
+      "expected": "aAA"
+    },
+    {
+      "source": "my_expected_value",
+      "expected": "myExpectedValue"
+    },
+    {
+      "source": "My_expected",
+      "expected": "MyExpected"
+    },
+    {
+      "source": "_pojo",
+      "expected": "Pojo"
+    }
+  ],
+  "caseStrings": ["Abc","AbC","abc","aBc", "abc1", "ABC"],
+  "spaceCheck": [
+    {
+      "source": "attribute",
+      "expected": "attribute"
+    },
+    {
+      "source": "attribute a",
+      "expected": "attributea"
+    },
+    {
+      "source": "attribute a B",
+      "expected": "attributeab"
+    }
+  ],
+  "underscore": [
+    {
+      "source": "pojo_loco",
+      "expected": "pojoLoco"
+    },
+    {
+      "source": "pojo_",
+      "expected": "pojo"
+    },
+    {
+      "source": "_pojo",
+      "expected": "Pojo"
+    },
+    {
+      "source": "my_id",
+      "expected": "myId"
+    },
+    {
+      "source": "mY_iD",
+      "expected": "myId"
+    }
+  ]
+}
