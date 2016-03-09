@@ -18,6 +18,14 @@ var PojoLoco = {
       property = property.replace(/ /g,"");
       property = PojoLoco.utils.getQualifiedName( property.toLowerCase() );
       return( property );
+    },
+    getTableNames: function( text ){
+      var regEx = /create table [a-z]*/ig,
+          tnames = text.match(regEx);
+      for(var i=0; i<tnames.length; i++){
+        tnames[i] = tnames[i].replace(/create table /i,'');
+      }
+      return(tnames);
     }
   }
 };

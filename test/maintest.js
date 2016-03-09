@@ -1,6 +1,7 @@
 var assert = require('assert'),
     should = require('chai').should(),
     data = require('./data.json'),
+    fs = require('fs'),
     pojoloco = require('../src/index.js');
 
 describe('main library', function(){
@@ -45,6 +46,17 @@ describe('toPojoAttribute function', function(){
     var strings = data.underscore;
     for (var i=0; i<strings.length; i++){
       pojoloco.utils.toPojoAttribute( strings[i].source ).should.equal( strings[i].expected );
+    }
+  });
+});
+
+describe('getTableNames function', function(){
+  it('should return simple table names', function(){
+    var simplecases = fs.readFileSync('test/createtablesimple.sql', 'utf8'),
+        tnames = pojoloco.utils.getTableNames( simplecases ),
+        expectedNames = ['abc','bcd','cde','DEF','EfG','fgh','ghi'];
+    for (var i=0; i<expectedNames.length; i++){
+      expectedNames[i].should.equal( tnames[i] );
     }
   });
 });
